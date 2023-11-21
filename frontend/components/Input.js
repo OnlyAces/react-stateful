@@ -37,16 +37,17 @@ import React from 'react'; /* STEP 0 */
 
 export default function Input() {
   /* STEP 1 */
-
+const [inputVValue, setInputValue] = useState('')
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     const { value } = evt.target;
-
+setInputValue(value)
     /* STEP 4 */
   };
   const reset = () => {
     /* STEP 5 */
+    setInputValue('')
   };
 
   const style = {
